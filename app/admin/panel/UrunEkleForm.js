@@ -32,7 +32,8 @@ export default function UrunEkleForm() {
       setGorsel(null);
       router.refresh();
     } else {
-      alert("Ürün eklenirken bir hata oluştu");
+      const veri = await res.json();
+      alert("HATA: " + veri.hata);
     }
   }
 
