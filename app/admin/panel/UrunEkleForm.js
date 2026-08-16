@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 export default function UrunEkleForm() {
   const [isim, setIsim] = useState("");
   const [fiyat, setFiyat] = useState("");
+  const [kategori, setKategori] = useState("");
   const [gorsel, setGorsel] = useState(null);
   const [yukleniyor, setYukleniyor] = useState(false);
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function UrunEkleForm() {
     const formData = new FormData();
     formData.append("isim", isim);
     formData.append("fiyat", fiyat);
+    formData.append("kategori", kategori);
     if (gorsel) formData.append("gorsel", gorsel);
 
     const res = await fetch("/api/admin/urunler", {
@@ -29,6 +31,7 @@ export default function UrunEkleForm() {
     if (res.ok) {
       setIsim("");
       setFiyat("");
+      setKategori("");
       setGorsel(null);
       router.refresh();
     } else {
@@ -53,6 +56,14 @@ export default function UrunEkleForm() {
         placeholder="Fiyat"
         value={fiyat}
         onChange={(e) => setFiyat(e.target.value)}
+        className="w-full border rounded px-3 py-2"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Kategori (örn: Ana Yemekler, İçecekler)"
+        value={kategori}
+        onChange={(e) => setKategori(e.target.value)}
         className="w-full border rounded px-3 py-2"
         required
       />

@@ -14,6 +14,7 @@ export async function POST(request) {
     const formData = await request.formData();
     const isim = formData.get("isim");
     const fiyat = formData.get("fiyat");
+    const kategori = formData.get("kategori");
     const gorsel = formData.get("gorsel");
 
     let gorselUrl = null;
@@ -38,6 +39,7 @@ export async function POST(request) {
     const { error } = await supabaseAdmin.from("urunler").insert({
       isim,
       fiyat,
+      kategori,
       gorsel_url: gorselUrl,
     });
 
