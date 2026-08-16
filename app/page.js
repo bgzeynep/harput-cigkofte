@@ -26,7 +26,7 @@ export default async function AnaSayfa() {
             {urunler.map((urun) => (
               <div key={urun.id} className="border rounded-lg overflow-hidden shadow-sm">
                 {urun.gorsel_url && (
-                  <img src={urun.gorsel_url} alt={urun.isim} className="w-full h-48 object-cover" />
+                  <img src={urun.gorsel_url} alt={urun.isim} className="w-full h-48 object-contain bg-white" />
                 )}
                 <div className="p-4 flex justify-between items-center">
                   <span className="font-semibold">{urun.isim}</span>
