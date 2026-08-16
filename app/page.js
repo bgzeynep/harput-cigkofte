@@ -1,5 +1,7 @@
 import { supabase } from "../lib/supabase";
 
+export const revalidate = 0;
+
 export default async function AnaSayfa() {
   const { data: urunler } = await supabase
     .from("urunler")
