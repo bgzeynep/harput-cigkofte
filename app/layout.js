@@ -8,6 +8,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
+      <head>
+        <meta name="google-site-verification" content="-631s_ivgZfk9TanC9Bf_TtkCC0T-IoyZ4RKM6fVh-w" />
+      </head>
       <body>
         <nav className="bg-red-700 text-white px-6 py-4 flex gap-6 items-center">
           <span className="font-bold text-lg">Harput Çiğ Köfte</span>
