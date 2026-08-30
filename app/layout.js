@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         <nav className="bg-red-700 text-white px-6 py-4 flex gap-6 items-center">
           <span className="font-bold text-lg">Harput Çiğ Köfte</span>
           <a href="/" className="hover:underline">Ana Sayfa</a>
+          <a href="/hakkimizda" className="hover:underline">Hakkımızda</a>
           <a href="/menu" className="hover:underline">Menü</a>
           <a href="/iletisim" className="hover:underline">İletişim</a>
         </nav>
