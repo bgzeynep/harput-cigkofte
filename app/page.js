@@ -58,6 +58,27 @@ export default async function AnaSayfa() {
         </p>
       </section>
 
+      <section className="max-w-5xl mx-auto py-4 pb-16 px-6">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="border border-red-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-red-800 mb-3">Vizyonumuz</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Bandırma'nın en sevilen Harput çiğ köfte markası olmak ve
+              geleneksel lezzeti özünden ödün vermeden gelecek nesillere
+              taşımak.
+            </p>
+          </div>
+          <div className="border border-red-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-red-800 mb-3">Misyonumuz</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Her gün taze ve doğal malzemelerle, Harput'un asıl tarifine
+              sadık kalarak, müşterilerimize güvenilir ve kaliteli bir lezzet
+              deneyimi sunmak.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-r from-yellow-400 via-red-600 to-red-800 py-10 px-6 text-center">
         <p className="text-white text-sm font-bold uppercase tracking-wide mb-2">🎉 Kaçırma!</p>
         <h2 className="text-3xl font-extrabold text-white mb-2">Sadakat Kampanyası</h2>
