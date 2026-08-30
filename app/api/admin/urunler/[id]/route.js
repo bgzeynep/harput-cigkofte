@@ -33,9 +33,19 @@ export async function PUT(request, { params }) {
   const formData = await request.formData();
   const isim = formData.get("isim");
   const fiyat = formData.get("fiyat");
+  const kategori = formData.get("kategori");
+  const sira = formData.get("sira");
   const gorsel = formData.get("gorsel");
 
   const guncellenecekVeri = { isim, fiyat };
+
+  if (kategori !== null) {
+    guncellenecekVeri.kategori = kategori;
+  }
+
+  if (sira !== null && sira !== "") {
+    guncellenecekVeri.sira = sira;
+  }
 
   if (gorsel && gorsel.size > 0) {
     const dosyaAdi = `${Date.now()}-${gorsel.name}`;
